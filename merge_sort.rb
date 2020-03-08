@@ -1,6 +1,6 @@
 def sort(arr)
   return arr if arr.count == 1
-
+    
   mid = arr.count/2
   l = arr[0...mid]
   r = arr[mid...arr.count]
@@ -9,13 +9,14 @@ def sort(arr)
   right = sort(r)
 
   # merge left and right
+    
   merged = []
   i = 0
   j = 0
   k = 0
 
-  left.each do |el|
-    if left[i] < right[j]
+  while i < left.count and j < right.count
+    if left[i] <= right[j]
       merged[k] = left[i]
       i += 1
     else
@@ -36,10 +37,14 @@ def sort(arr)
     k += 1
     j += 1
   end
-
+    
   return merged
 end
 
 
-arr = [5, 4, 1, 2]
+arr = [8,1,2,2,3]
+# mid = arr.count/2
+# puts arr[0...mid]
+# puts arr[mid...arr.count]
+# puts (arr.count/2)
 puts sort(arr)
