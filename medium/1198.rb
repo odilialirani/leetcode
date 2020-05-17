@@ -7,9 +7,9 @@ def smallest_common_element(mat)
     remaining = mat[0]
     
     mat.each do |row|
-       remaining = remaining & row 
+      remaining = remaining & row 
+      return -1 if remaining.empty?
     end
-    
-    return -1 if remaining.empty?
+
     return remaining[0]
 end
