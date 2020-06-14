@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/queries-on-a-permutation-with-key
+
 class Solution:
   def processQueries(self, queries: List[int], m: int) -> List[int]:
     arr = []
