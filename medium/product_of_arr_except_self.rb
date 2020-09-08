@@ -29,3 +29,14 @@ def product_except_self(nums)
 
   return nums # O(n) runtime.
 end
+
+# Followup: could you solve it with constant space complexity?
+# the output array does not count as extra space for the purpose of space
+# complexity analysis
+
+# To do this without "extra" space, I'd create an output array
+# the idea is still the same, but instead of utilizing 2 temporary arrays,
+# we'll first calculate productLeft and save it into the output array.
+# then, modify the input array, nums, to store productRight values.
+# Lastly, iterate over the output array one more time,
+# where output[i] = output[i] * nums[i], and return output in the end.
